@@ -462,17 +462,55 @@ section{ position:relative; padding: clamp(72px, 12vw, 140px) 0; }
 }
 .venue-sub{ margin-top:10px; letter-spacing:0.14em; text-transform:uppercase; font-size:0.85rem; color: var(--taupe); }
 .venue-card{
-  max-width:420px; margin:44px auto 0;
+  flex: 1 1 290px;
+  max-width:340px;
+  margin:0;
   border:1px solid var(--line);
   border-radius:22px;
-  padding: 30px 26px;
-  background: rgba(255,255,255,0.72);
+  padding: 30px 24px;
+  background: rgba(255,255,255,0.78);
   box-shadow: 0 18px 35px rgba(58,46,42,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.venue-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 24px 45px rgba(58,46,42,0.08);
+}
+.venue-cards-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1080px;
+  margin: 44px auto 0;
+  padding: 0 16px;
+}
+.venue-badge{
+  display: inline-block;
+  align-self: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  font-weight: 700;
+  margin-bottom: 12px;
+  background: rgba(201,166,110,0.15);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+.venue-card.main-venue{
+  border-color: rgba(201,166,110,0.5);
+  background: linear-gradient(145deg, rgba(255,255,255,0.94), rgba(201,166,110,0.12));
+  box-shadow: 0 20px 40px rgba(167,122,86,0.1);
 }
 .venue-name{ font-size:1.3rem; font-family:'Cormorant Garamond', serif; }
 .venue-address{ margin-top:8px; font-size:0.92rem; color: var(--charcoal); }
 .venue-maps-btn{
-  margin-top:22px; display:inline-flex; align-items:center; gap:10px;
+  margin-top:22px; display:inline-flex; align-items:center; justify-content:center; gap:10px;
 }
 .venue-maps-btn[disabled]{
   opacity:0.4; cursor:not-allowed; pointer-events:none;
@@ -482,6 +520,93 @@ section{ position:relative; padding: clamp(72px, 12vw, 140px) 0; }
 /* Reception highlight: used when reception is in a different city/state */
 .venue-card.reception-card{ margin-top:18px; border-left:4px solid rgba(176,213,192,0.18); padding-left:18px; }
 .venue-address.venue-highlight{ background: linear-gradient(90deg, rgba(176,213,192,0.10), rgba(252,178,169,0.04)); padding:8px 10px; border-radius:8px; display:inline-block; font-weight:600; color:var(--charcoal); }
+
+/* ---------- Config-driven enrichments ---------- */
+.blessing-text{
+  font-family: 'Noto Serif Devanagari', 'Yatra One', serif;
+  font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+  letter-spacing: 0.12em;
+  color: var(--gold-dark);
+  margin-bottom: 8px;
+}
+.story-text-hi{
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 0.96rem;
+  color: var(--taupe);
+  margin: 14px auto 0;
+  max-width: 540px;
+  line-height: 1.8;
+}
+.events-intro{
+  max-width: 540px;
+  margin: 14px auto 0;
+  font-size: 0.98rem;
+  color: var(--charcoal);
+  font-weight: 300;
+  line-height: 1.6;
+}
+.countdown-note{
+  margin-top: 24px;
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.tl-badge{
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--gold-dark);
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-right: 6px;
+  vertical-align: 1px;
+}
+.tl-hindi{
+  display: block;
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  color: var(--taupe);
+  margin-top: 3px;
+  font-weight: 500;
+}
+.tl-desc-hi{
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 0.9rem;
+  color: var(--taupe);
+  margin-top: 8px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+.tl-dress{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: var(--charcoal);
+  background: rgba(201,166,110,0.14);
+  border: 1px solid rgba(201,166,110,0.25);
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.tl-dress-label{
+  font-weight: 700;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+}
+.closing-text-hi{
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 0.95rem;
+  color: var(--taupe);
+  margin-top: 10px;
+}
 
 /* ---------- Gallery ---------- */
 #gallery{ background: linear-gradient(180deg, rgba(243,229,219,0.58), rgba(255,255,255,0.72)); }

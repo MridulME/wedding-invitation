@@ -1,112 +1,191 @@
 /* =========================================================
-   WEDDING DATA — edit everything here.
-   This is the ONLY file you should need to touch to update
-   names, dates, events, venue, or the maps link. Nothing
-   else in the project needs to change.
+   WEDDING DATA — CONFIG-DRIVEN INVITATION
+   All names, dates, events, venues, descriptions, mantras,
+   and maps links are configured here.
+   Nothing is hardcoded in the HTML.
 ========================================================= */
 
 var weddingData = {
-  bride: "Shweta",
-  groom: "Vicky",
+  meta: {
+    title: "Mridul & Anjali · Shubh Vivah",
+    description: "You are invited to the wedding celebrations of Mridul Raj & Anjali Singh · 1–5 December 2026 · Dhanbad, Jharkhand",
+    ogTitle: "Mridul & Anjali · Shubh Vivah",
+    ogDescription: "Haldi, Mehandi, Shaadi & Reception · 1–5 December 2026 · Dhanbad, Jharkhand"
+  },
 
-  // ISO date + time with the +05:30 (India) timezone offset.
-  // The countdown on the page uses this exact value.
-  weddingDateISO: "2026-11-25T00:00:00+05:30",
+  couple: {
+    groom: {
+      name: "Mridul Raj",
+      heroName: "Mridul",
+      hindi: "मृदुल राज",
+      role: "The Groom"
+    },
+    bride: {
+      name: "Anjali Singh",
+      heroName: "Anjali",
+      hindi: "अंजलि सिंह",
+      role: "The Bride"
+    },
+    monogram: "M & A"
+  },
 
-  location: "Damoh, Madhya Pradesh, India",
+  // Primary couple names & monogram
+  groom: "Mridul",
+  bride: "Anjali",
+  groomFull: "Mridul Raj",
+  brideFull: "Anjali Singh",
+  monogram: "M & A",
 
-  // -----------------------------------------------------
-  // 📍 VENUE + GOOGLE MAPS
-  // -----------------------------------------------------
-  // Fill in the real venue name and address once you have it.
-  // To get a maps link: open Google Maps → search the venue →
-  // click "Share" → "Copy link" → paste it below as mapsUrl.
-  // Leaving mapsUrl as "" automatically hides/disables the
-  // "View on Google Maps" button on the site — nothing breaks.
+  // Auspicious blessings & mantras
+  topBlessing: "॥ जय गणेशाय नमः ॥",
+  subBlessing: "॥ शुभ विवाह ॥",
+
+  // Dates & countdown
+  // Target: Start of wedding celebrations (Haldi ceremony)
+  weddingDateISO: "2026-12-01T11:00:00+05:30",
+  // Target: Auspicious Wedding Muhurat (Shaadi & Phere)
+  mainWeddingDateISO: "2026-12-03T19:00:00+05:30",
+  dateDisplay: "1 – 5 December 2026",
+  dateFormatted: "01 · 12 · 2026 — 05 · 12 · 2026",
+  countdownNote: "until the haldi begins · Tuesday, 1 December 2026",
+
+  // Location
+  location: "Dhanbad, Jharkhand, India",
+  city: "Dhanbad",
+  state: "Jharkhand, India",
+
+  // Cover section
+  cover: {
+    topBlessing: "॥ जय गणेशाय नमः ॥",
+    eyebrow: "Shubh Vivah",
+    sub: "Together with our families",
+    inviteLine: "request the honour of your presence as they begin their forever",
+    openBtn: "Open Invitation"
+  },
+
+  // Story section
+  story: {
+    eyebrow: "Our Story",
+    title: "A Beautiful New Chapter",
+    text: "Four joyous days of colour, music, traditions and blessings. With hearts full of love and gratitude, we invite you to join us as we celebrate our union. Your presence and blessings will make our celebrations complete.",
+    textHi: "प्रेम और आशीर्वाद के बंधन में बँधे दो परिवार, एक सुंदर नई शुरुआत की ओर। आपकी उपस्थिति और स्नेह से यह उत्सव मंगलमय बनेगा।",
+    namesLine: "Mridul & Anjali"
+  },
+
+  // Ceremony highlight section (Day 3: Shaadi & Phere)
+  ceremony: {
+    eyebrow: "The Sacred Wedding Ceremony",
+    date: "03",
+    month: "December 2026",
+    tagline: "the wedding of",
+    couple: "Mridul & Anjali",
+    note: "Phusbunglow, Bhaga More, Dhanbad · Thursday, 3 Dec · 07:00 PM onwards"
+  },
+
+  // Venues overview
   venue: {
-    name: "Hotel Royal Damyanti Palace",                     // <-- replace with real venue name
-    address: "Damoh, Madhya Pradesh, India",   // <-- replace with full address
-    mapsUrl: "https://www.google.com/maps/place/Hotel+Royal+Damyanti+Palace/@23.7993804,79.4524991,17z/data=!3m1!4b1!4m10!3m9!1s0x398201001eda2433:0x96e727abd72ee0f9!5m3!1s2026-11-24!4m1!1i2!8m2!3d23.7993755!4d79.455074!16s%2Fg%2F11xdttwz6t?entry=ttu&g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D"                                 // <-- paste your Google Maps share link here
+    name: "Wedding Festivities · Dhanbad, Jharkhand",
+    address: "Day 1 & 2 (Haldi & Mehandi): Harina Baghan Colony, Harina Basti (828306)\nDay 3 (Shaadi): Phusbunglow, Bhaga More (828301)\nDay 5 (Grand Reception): Dumra (828306)",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=RC97%2BC42%2C+Phusbunglow%2C+Bhaga+More%2C+Jharkhand+828301"
   },
 
-  // Optional: separate reception venue (different city/state)
-  reception: {
-    name: "Reception Hall (Patna)",
-    address: "Khushi Marriage Park, Patna, Bihar, India",
-    mapsUrl: "https://www.google.com/maps/place/Khushi+Marriage+Park/@25.572077,85.053691,17z/data=!3m1!4b1!4m6!3m5!1s0x39f2a9da6cd41c87:0x2da6efab57ea44f5!8m2!3d25.572077!4d85.053691!16s%2Fg%2F11b7qww3f6!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D" // <-- paste Reception Google Maps share link here to enable Maps button
-  },
+  // Multi-venue cards list for all 4 days
+  venues: [
+    {
+      badge: "Days 1 & 2 · Haldi & Mehandi",
+      name: "Harina Baghan Colony",
+      address: "Harina Basti, Dhanbad, Jharkhand 828306",
+      mapsUrl: "https://www.google.com/maps/search/?api=1&query=R646%2BVRV%2C+Harina+Baghan+Colony%2C+Harina+Basti%2C+Jharkhand+828306",
+      hint: "Venue for Haldi Ceremony & Mehandi Sangeet"
+    },
+    {
+      badge: "Day 3 · Shaadi & Phere (Wedding)",
+      name: "Phusbunglow",
+      address: "Bhaga More, Dhanbad, Jharkhand 828301",
+      mapsUrl: "https://www.google.com/maps/search/?api=1&query=RC97%2BC42%2C+Phusbunglow%2C+Bhaga+More%2C+Jharkhand+828301",
+      hint: "Main Wedding Ceremony & Holy Vows",
+      isMain: true
+    },
+    {
+      badge: "Day 5 · Grand Wedding Reception",
+      name: "Dumra Celebration Ground",
+      address: "Dumra, Dhanbad, Jharkhand 828306",
+      mapsUrl: "https://www.google.com/maps/search/?api=1&query=Dumra%2C+Jharkhand+828306",
+      hint: "Grand Wedding Reception & Dinner"
+    }
+  ],
 
-  // -----------------------------------------------------
-  // 🗓️ EVENTS — shown on the timeline, in this order
-  // -----------------------------------------------------
+  // 4 Days of Wedding Events (Complete itinerary from mirdul-anjali)
   events: [
     {
-      name: "Engagement",
-      date: "24 November 2026",
-      location: "Damoh, Madhya Pradesh",
-      description: "A quiet, joyful start — the first formal step of our journey together, surrounded by close family."
+      dayLabel: "Day 1",
+      name: "Haldi Ceremony",
+      hindi: "हल्दी की रस्म",
+      date: "Tuesday, 1 December 2026",
+      time: "11:00 AM onwards",
+      location: "Harina Baghan Colony, Harina Basti, Jharkhand 828306",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=R646%2BVRV%2C+Harina+Baghan+Colony%2C+Harina+Basti%2C+Jharkhand+828306",
+      dress: "Shades of Yellow",
+      description: "A sunshine-soaked celebration of turmeric, fragrant marigolds, and joyous laughter as loved ones bless the couple with a golden glow.",
+      descHi: "हल्दी, गेंदे के फूलों और हँसी-ख़ुशी से भरी पावन रस्म, जब सभी प्रियजन मिलकर वर-वधू को शुभ आशीर्वाद व स्नेह देंगे।",
+      accent: "#d98200"
     },
     {
-      name: "Cake Celebration",
-      date: "24 November 2026",
-      location: "Damoh, Madhya Pradesh",
-      description: "A sweet little celebration to mark the beginning of the festivities, shared with our nearest and dearest."
+      dayLabel: "Day 2",
+      name: "Mehandi & Sangeet Night",
+      hindi: "मेहंदी एवं संगीत संध्या",
+      date: "Wednesday, 2 December 2026",
+      time: "05:00 PM onwards",
+      location: "Harina Baghan Colony, Harina Basti, Jharkhand 828306",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=R646%2BVRV%2C+Harina+Baghan+Colony%2C+Harina+Basti%2C+Jharkhand+828306",
+      dress: "Festive Green & Traditional Glam",
+      description: "An enchanting evening of intricate henna artistry, foot-tapping beats of the dhol, dance performances, and musical celebration with family and friends.",
+      descHi: "हाथों में रचने वाली मेहंदी के रंगों, ढोल की थाप, मधुर संगीत और अपनों के संग झूमते-गाते जश्न की एक हसीन व यादगार शाम।",
+      accent: "#13877a"
     },
     {
-      name: "Haldi & Mehendi Ceremony",
-      date: "24 November 2026",
-      location: "Damoh, Madhya Pradesh",
-      description: "A morning full of turmeric, laughter and blessings, as family and loved ones gather to prepare us for the big day."
+      dayLabel: "Day 3",
+      name: "Shaadi & Phere (Wedding)",
+      hindi: "शुभ विवाह एवं सात फेरे",
+      date: "Thursday, 3 December 2026",
+      time: "07:00 PM onwards",
+      location: "Phusbunglow, Bhaga More, Jharkhand 828301",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=RC97%2BC42%2C+Phusbunglow%2C+Bhaga+More%2C+Jharkhand+828301",
+      dress: "Royal Indian Ethnic & Traditional Finery",
+      description: "The sacred union: holy vows taken around the sacred fire, sealed with Vedic rituals, blessings of the elders and the divine.",
+      descHi: "पवित्र अग्नि के साक्षी में सात फेरों का पावन बंधन, वैदिक मंत्रोच्चार और बड़ों व ईश्वर के मंगल आशीर्वाद के साथ नवजीवन का शुभारंभ।",
+      accent: "#c4321a",
+      isMain: true
     },
     {
-      name: "Sangeet",
-      date: "24 November 2026",
-      location: "Damoh, Madhya Pradesh",
-      description: " An evening of music, dance and celebration, as we honor the love and joy that brought us together."
-    },
-    {
-      name: "Baraat",
-      date: "25 November 2026",
-      location: "Damoh, Madhya Pradesh",
-      description: "The groom's joyous procession, with music and dancing, leading Vicky to his bride."
-    },
-    {
-      name: "Wedding Ceremony",
-      date: "25 November 2026",
-      location: "Damoh, Madhya Pradesh",
-      description: "The main event — Shweta and Vicky take their vows, surrounded by everyone they hold dear.",
-      isMain: true   // keep this flag only on the one event you want visually highlighted
-    },
-    {
-      name: "Reception",
-      date: "30 November 2026",
-      location: "Khushi Marriage Park, Patna, Bihar",
-      description: "An evening to celebrate the newly married couple, with family and friends new and old."
+      dayLabel: "Day 5",
+      name: "Grand Wedding Reception",
+      hindi: "भव्य स्वागत समारोह एवं प्रीतिभोज",
+      date: "Saturday, 5 December 2026",
+      time: "07:30 PM onwards",
+      location: "Dumra, Jharkhand 828306",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Dumra%2C+Jharkhand+828306",
+      dress: "Royal Formal / Black Tie & Glam",
+      description: "A royal evening of felicitations, fine dining, and joyous celebration welcoming the newly married couple as they begin their journey together.",
+      descHi: "नवदम्पति के सम्मान में आयोजित एक भव्य एवं शाही शाम, स्वादिष्ट प्रीतिभोज और परिजनों व स्नेहीजनों के मंगल आशीर्वाद का उत्सव।",
+      accent: "#6b1028"
     }
-  ]
+  ],
+
+  // Closing & Blessings section
+  blessings: {
+    topBlessing: "॥ जय गणेशाय नमः ॥",
+    title: "With Love & Blessings",
+    lead: "Your presence and blessings will make our celebration complete.",
+    leadHi: "आपकी उपस्थिति और आशीर्वाद से हमारा उत्सव पूर्ण होगा।",
+    signature: "Mridul & Anjali",
+    family: "with our families",
+    closingCredit: "Mridul & Anjali · 1 – 5 December 2026 · Dhanbad, Jharkhand"
+  },
+
+  // Background music
+  music: {
+    enabled: true,
+    src: "assets/music/wedding.mp3"
+  }
 };
-
-/* =========================================================
-   🎵 MUSIC
-   -----------------------------------------------------
-   Drop your audio file into:  assets/music/wedding.mp3
-   (exactly that filename, or update the <source> path in
-   index.html to match whatever you name it).
-   The music button in the corner of the site will simply
-   stay visible but do nothing if no file is present — it
-   never breaks the page.
-========================================================= */
-
-/* =========================================================
-   🖼️ PHOTOS
-   -----------------------------------------------------
-   Drop up to 6 photos into: assets/images/gallery/
-   named exactly:
-     photo-1.jpg, photo-2.jpg, photo-3.jpg,
-     photo-4.jpg, photo-5.jpg, photo-6.jpg
-   Each gallery tile automatically shows the matching photo
-   once it exists, and falls back to the elegant placeholder
-   tile if that file is missing — so you can add photos one
-   at a time. (Any image format works as long as the filename
-   and extension match what's referenced in index.html.)
-========================================================= */

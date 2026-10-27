@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "Mridul & Anjali · Shubh Vivah",
+    "description": "You are invited to the wedding celebrations of Mridul Raj & Anjali Singh · 1–5 December 2026 · Dhanbad, Jharkhand",
+    "ogTitle": "Mridul & Anjali · Shubh Vivah",
+    "ogDescription": "Haldi, Mehandi, Shaadi & Reception · 1–5 December 2026 · Dhanbad, Jharkhand"
+  },
+  "couple": {
+    "groom": {
+      "name": "Mridul Raj",
+      "heroName": "Mridul",
+      "hindi": "मृदुल राज",
+      "role": "The Groom"
+    },
+    "bride": {
+      "name": "Anjali Singh",
+      "heroName": "Anjali",
+      "hindi": "अंजलि सिंह",
+      "role": "The Bride"
+    },
+    "monogram": "M & A"
+  },
+  "wedding": {
+    "topBlessing": "॥ जय गणेशाय नमः ॥",
+    "subBlessing": "॥ शुभ विवाह ॥",
+    "eyebrow": "Together with their families",
+    "invitationLine": "request the honour of your presence as they begin their forever",
+    "eventsIntro": "Four joyous days of colour, music, traditions and blessings. We would love for you to be there for every moment.",
+    "dates": {
+      "ariaLabel": "Tuesday 1 to Saturday 5 December 2026",
+      "startDate": "01",
+      "endDate": "05",
+      "monthYear": "December 2026"
+    }
+  },
+  "countdown": {
+    "target": "2026-12-01T11:00:00+05:30",
+    "note": "until the haldi begins · Tuesday, 1 December 2026"
+  },
+  "venues": [
+    {
+      "badge": "Days 1 & 2 · Haldi & Mehandi",
+      "name": "Harina Baghan Colony",
+      "address": "Harina Basti, Dhanbad, Jharkhand 828306",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=R646%2BVRV%2C+Harina+Baghan+Colony%2C+Harina+Basti%2C+Jharkhand+828306"
+    },
+    {
+      "badge": "Day 3 · Shaadi & Phere (Wedding)",
+      "name": "Phusbunglow",
+      "address": "Bhaga More, Dhanbad, Jharkhand 828301",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=RC97%2BC42%2C+Phusbunglow%2C+Bhaga+More%2C+Jharkhand+828301",
+      "isMain": true
+    },
+    {
+      "badge": "Day 5 · Grand Wedding Reception",
+      "name": "Dumra Celebration Ground",
+      "address": "Dumra, Dhanbad, Jharkhand 828306",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Dumra%2C+Jharkhand+828306"
+    }
+  ],
+  "events": [
+    {
+      "dayLabel": "Day 1",
+      "name": "Haldi Ceremony",
+      "hindi": "हल्दी की रस्म",
+      "date": "Tuesday, 1 December 2026",
+      "time": "11:00 AM onwards",
+      "location": "Harina Baghan Colony, Harina Basti, Jharkhand 828306",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=R646%2BVRV%2C+Harina+Baghan+Colony%2C+Harina+Basti%2C+Jharkhand+828306",
+      "dress": "Shades of Yellow",
+      "description": "A sunshine-soaked celebration of turmeric, fragrant marigolds, and joyous laughter as loved ones bless the couple with a golden glow.",
+      "descHi": "हल्दी, गेंदे के फूलों और हँसी-ख़ुशी से भरी पावन रस्म, जब सभी प्रियजन मिलकर वर-वधू को शुभ आशीर्वाद व स्नेह देंगे।",
+      "accent": "#d98200"
+    },
+    {
+      "dayLabel": "Day 2",
+      "name": "Mehandi & Sangeet Night",
+      "hindi": "मेहंदी एवं संगीत संध्या",
+      "date": "Wednesday, 2 December 2026",
+      "time": "05:00 PM onwards",
+      "location": "Harina Baghan Colony, Harina Basti, Jharkhand 828306",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=R646%2BVRV%2C+Harina+Baghan+Colony%2C+Harina+Basti%2C+Jharkhand+828306",
+      "dress": "Festive Green & Traditional Glam",
+      "description": "An enchanting evening of intricate henna artistry, foot-tapping beats of the dhol, dance performances, and musical celebration with family and friends.",
+      "descHi": "हाथों में रचने वाली मेहंदी के रंगों, ढोल की थाप, मधुर संगीत और अपनों के संग झूमते-गाते जश्न की एक हसीन व यादगार शाम।",
+      "accent": "#13877a"
+    },
+    {
+      "dayLabel": "Day 3",
+      "name": "Shaadi & Phere (Wedding)",
+      "hindi": "शुभ विवाह एवं सात फेरे",
+      "date": "Thursday, 3 December 2026",
+      "time": "07:00 PM onwards",
+      "location": "Phusbunglow, Bhaga More, Jharkhand 828301",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=RC97%2BC42%2C+Phusbunglow%2C+Bhaga+More%2C+Jharkhand+828301",
+      "dress": "Royal Indian Ethnic & Traditional Finery",
+      "description": "The sacred union: holy vows taken around the sacred fire, sealed with Vedic rituals, blessings of the elders and the divine.",
+      "descHi": "पवित्र अग्नि के साक्षी में सात फेरों का पावन बंधन, वैदिक मंत्रोच्चार और बड़ों व ईश्वर के मंगल आशीर्वाद के साथ नवजीवन का शुभारंभ।",
+      "accent": "#c4321a",
+      "isMain": true
+    },
+    {
+      "dayLabel": "Day 5",
+      "name": "Grand Wedding Reception",
+      "hindi": "भव्य स्वागत समारोह एवं प्रीतिभोज",
+      "date": "Saturday, 5 December 2026",
+      "time": "07:30 PM onwards",
+      "location": "Dumra, Jharkhand 828306",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dumra%2C+Jharkhand+828306",
+      "dress": "Royal Formal / Black Tie & Glam",
+      "description": "A royal evening of felicitations, fine dining, and joyous celebration welcoming the newly married couple as they begin their journey together.",
+      "descHi": "नवदम्पति के सम्मान में आयोजित एक भव्य एवं शाही शाम, स्वादिष्ट प्रीतिभोज और परिजनों व स्नेहीजनों के मंगल आशीर्वाद का उत्सव।",
+      "accent": "#6b1028"
+    }
+  ]
+}

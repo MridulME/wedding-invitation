@@ -1,74 +1,58 @@
-# Shweta & Vicky — Wedding Invitation
+# Mridul & Anjali — Wedding Invitation
 
-A premium, single-page wedding invitation site. No build step, no
-dependencies — just static files you can open locally or host on
-GitHub Pages for free.
+A luxury, interactive digital wedding invitation site. No build steps, no external dependencies — 100% config-driven static files you can open locally or host on GitHub Pages for free.
 
-## Folder structure
+---
+
+## 📅 4 Days of Wedding Celebrations
+
+All details are configured in `js/config.js` and `config.json`:
+- **Day 1 (01 Dec)**: Haldi Ceremony · Harina Baghan Colony, Dhanbad
+- **Day 2 (02 Dec)**: Mehandi & Sangeet Night · Harina Baghan Colony, Dhanbad
+- **Day 3 (03 Dec)**: Shaadi & Phere (Wedding Ceremony) · Phusbunglow, Bhaga More, Dhanbad
+- **Day 5 (05 Dec)**: Grand Wedding Reception · Dumra, Dhanbad
+
+---
+
+## 🛠️ Config-Driven Architecture
+
+All content is decoupled from `index.html`. You only need to touch `js/config.js` (or `config.json`) to update:
+- Names, blessings, mantras, dates, and locations
+- 4 days of events, dates, times, Hindi subtitles, dress codes, and descriptions
+- Venues, addresses, and individual Google Maps links
+- Countdown timer target date and custom countdown note
+- Cover screen text and closing blessings
+
+### Folder Structure
 
 ```
 wedding-invitation/
-├── index.html                     ← the page itself
+├── index.html                     ← Clean, config-driven HTML template
+├── config.json                    ← Shared configuration data (JSON)
 ├── css/
-│   └── style.css                  ← all visual styling + petal animation styles
+│   └── style.css                  ← All visual styling, animations, fonts, and responsive layout
 ├── js/
-│   ├── config.js                  ← ✏️ EDIT THIS for names, dates, events, venue, maps
-│   ├── cover.js                   ← "Open Invitation" transition
-│   ├── countdown.js               ← live countdown logic
-│   ├── timeline.js                ← renders the wedding events timeline
-│   ├── venue.js                   ← renders venue name/address + maps button
-│   ├── nav.js                     ← floating navigation + scrollspy
-│   ├── music.js                   ← background music controller
-│   ├── petals.js                  ← ambient falling flower petal animation
-│   └── reveal.js                  ← fade-in-on-scroll for every section
+│   ├── config.js                  ← ✏️ Central configuration file (all data lives here)
+│   ├── render.js                  ← Dynamic render engine that populates page from config.js
+│   ├── timeline.js                ← Renders the 4 days of wedding events dynamically
+│   ├── venue.js                   ← Renders venue cards & Google Maps buttons dynamically
+│   ├── countdown.js               ← Live countdown timer to the start of celebrations
+│   ├── cover.js                   ← "Open Invitation" transition & entrance
+│   ├── nav.js                     ← Floating navigation & scrollspy
+│   ├── music.js                   ← Background music controller
+│   ├── petals.js                  ← Ambient falling flower petals animation
+│   └── reveal.js                  ← Smooth scroll-reveal animation
 └── assets/
     ├── music/
-    │   └── (put wedding.mp3 here)
+    │   └── wedding.mp3            ← Background wedding music
     └── images/
         └── gallery/
-            └── (put photo-1.jpg … photo-6.jpg here)
+            └── photo-1.jpg        ← Couple photo
 ```
 
-## Where to add things
+---
 
-| What                     | Where                                         |
-|--------------------------|------------------------------------------------|
-| Names, dates, events     | `js/config.js`                                 |
-| Venue name & address     | `js/config.js` → `venue` object                |
-| Google Maps link         | `js/config.js` → `venue.mapsUrl`               |
-| Background music         | `assets/music/wedding.mp3`                     |
-| Gallery photos           | `assets/images/gallery/photo-1.jpg` … `photo-6.jpg` |
+## 🚀 Live Preview & Deployment
 
-You should almost never need to touch `index.html`, `css/style.css`,
-or the other `js/` files — `js/config.js` and the two `assets/`
-folders are the only things you'll edit day to day.
-
-## Getting a Google Maps link
-
-1. Open [Google Maps](https://maps.google.com) and search your venue.
-2. Click **Share** → **Copy link**.
-3. Paste it as `mapsUrl` in `js/config.js`.
-4. Leave it as `""` (empty) and the "View on Google Maps" button
-   automatically stays disabled — nothing looks broken either way.
-
-## Running it locally
-
-Just open `index.html` in a browser — no server or build tools needed.
-(Some browsers restrict local file access slightly; if the audio or
-fonts seem off locally, that's normal and resolves itself once hosted.)
-
-## Deploying to GitHub Pages
-
-1. Create a new **public** GitHub repository.
-2. Upload this entire folder's contents to the repo root, keeping the
-   folder structure intact (drag-and-drop upload preserves folders).
-3. In the repo, go to **Settings → Pages**.
-4. Under **Build and deployment**, set **Source** to "Deploy from a
-   branch", **Branch** to `main`, folder to `/ (root)`, then **Save**.
-5. Wait 1–2 minutes, then refresh — GitHub shows your live URL, e.g.
-   `https://your-username.github.io/your-repo-name/`.
-6. Share that link. Test it on your own phone first.
-
-Future edits: change `js/config.js` (or add files to `assets/`),
-upload the changed files back to the same GitHub repo, and Pages
-redeploys automatically within a minute or two.
+- **GitHub Repository**: [https://github.com/MridulME/wedding-invitation](https://github.com/MridulME/wedding-invitation)
+- **Live GitHub Pages URL**: [https://mridulme.github.io/wedding-invitation/](https://mridulme.github.io/wedding-invitation/)

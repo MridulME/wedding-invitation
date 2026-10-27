@@ -3,21 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Shweta & Vicky | Wedding Invitation</title>
-<meta name="description" content="Join Shweta & Vicky as they celebrate their wedding in Damoh, Madhya Pradesh on 25 November 2026." />
+<title>Mridul &amp; Anjali · Shubh Vivah</title>
+<meta name="description" content="You are invited to the wedding celebrations of Mridul Raj &amp; Anjali Singh · 1–5 December 2026 · Dhanbad, Jharkhand" />
 
-<meta property="og:title" content="Shweta & Vicky | Wedding Invitation" />
-<meta property="og:description" content="Join Shweta & Vicky as they celebrate their wedding in Damoh, Madhya Pradesh on 25 November 2026." />
+<meta property="og:title" content="Mridul &amp; Anjali · Shubh Vivah" />
+<meta property="og:description" content="Haldi, Mehandi, Shaadi &amp; Reception · 1–5 December 2026 · Dhanbad, Jharkhand" />
 <meta property="og:type" content="website" />
-<!-- OPTIONAL: add an og:image tag once you have a nice cover photo, e.g.
-<meta property="og:image" content="assets/images/gallery/photo-1.jpg" /> -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Shweta & Vicky | Wedding Invitation" />
-<meta name="twitter:description" content="25 November 2026 · Damoh, Madhya Pradesh, India" />
+<meta name="twitter:title" content="Mridul &amp; Anjali · Shubh Vivah" />
+<meta name="twitter:description" content="1–5 December 2026 · Dhanbad, Jharkhand, India" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Parisienne&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Parisienne&family=Yatra+One&display=swap" rel="stylesheet" />
 
 <!-- All styles live in css/style.css -->
 <link rel="stylesheet" href="css/style.css" />
@@ -28,17 +26,18 @@
 <div id="cover">
   <div class="cover-frame" aria-hidden="true"></div>
   <div class="cover-inner">
-    <p class="monogram">S &amp; V</p>
-    <p class="cover-eyebrow eyebrow">The Wedding</p>
-    <h1 class="cover-names">
-      Shweta
+    <p class="blessing-text" id="cover-blessing"></p>
+    <p class="monogram" id="cover-monogram"></p>
+    <p class="cover-eyebrow eyebrow" id="cover-eyebrow"></p>
+    <h1 class="cover-names" id="cover-names">
+      <span id="cover-groom"></span>
       <span class="amp">&amp;</span>
-      Vicky
+      <span id="cover-bride"></span>
     </h1>
-    <p class="cover-sub">Together with our families</p>
-    <p class="cover-invite-line">Invite you to celebrate their love</p>
-    <p class="cover-date" id="cover-date">25 · 11 · 2026</p>
-    <p class="cover-location">Damoh, Madhya Pradesh, India</p>
+    <p class="cover-sub" id="cover-sub"></p>
+    <p class="cover-invite-line" id="cover-invite-line"></p>
+    <p class="cover-date" id="cover-date"></p>
+    <p class="cover-location" id="cover-location"></p>
     <div class="open-btn">
       <button class="btn" id="open-invitation-btn">Open Invitation</button>
     </div>
@@ -51,14 +50,11 @@
   <!-- OPENING INVITATION / OUR STORY -->
   <section id="story">
     <div class="container">
-      <p class="eyebrow reveal">Our Story</p>
-      <h2 class="reveal reveal-delay-1" style="font-size:clamp(2rem,4.4vw,2.9rem); margin-top:14px;">A little glimpse of what's ahead</h2>
-      <p class="story-text reveal reveal-delay-2">
-        With hearts full of love and happiness, we invite you to join us as we begin
-        a beautiful new chapter together. Your presence and blessings will make our
-        celebrations even more special.
-      </p>
-      <p class="story-names-line reveal reveal-delay-2">Shweta &amp; Vicky</p>
+      <p class="eyebrow reveal" id="story-eyebrow"></p>
+      <h2 class="reveal reveal-delay-1" id="story-title" style="font-size:clamp(2rem,4.4vw,2.9rem); margin-top:14px;"></h2>
+      <p class="story-text reveal reveal-delay-2" id="story-text"></p>
+      <p class="story-text-hi reveal reveal-delay-2" id="story-text-hi" style="display:none;"></p>
+      <p class="story-names-line reveal reveal-delay-2" id="story-names"></p>
       <div class="divider reveal reveal-delay-3">
         <span class="stroke"></span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 21s-7-4.5-9.5-9C.5 8 2 4 6 4c2.5 0 4.5 1.7 6 4 1.5-2.3 3.5-4 6-4 4 0 5.5 4 3.5 8-2.5 4.5-9.5 9-9.5 9z"/></svg>
@@ -70,8 +66,8 @@
   <!-- COUNTDOWN -->
   <section id="countdown">
     <div class="container">
-      <p class="eyebrow reveal">Counting Down To</p>
-      <h2 class="countdown-title reveal reveal-delay-1">Our Day</h2>
+      <p class="eyebrow reveal" id="cd-eyebrow"></p>
+      <h2 class="countdown-title reveal reveal-delay-1" id="cd-title"></h2>
 
       <div id="countdown-active">
         <div class="countdown-grid reveal reveal-delay-2">
@@ -96,7 +92,8 @@
           </div>
         </div>
       </div>
-      <p class="countdown-arrived reveal" id="countdown-arrived" style="display:none;">The Day Has Arrived</p>
+      <p class="countdown-note reveal reveal-delay-3" id="countdown-note"></p>
+      <p class="countdown-arrived reveal" id="countdown-arrived" style="display:none;">The Celebrations Have Begun</p>
     </div>
   </section>
 
@@ -104,13 +101,14 @@
   <section id="events">
     <div class="container">
       <div class="events-head">
-        <p class="eyebrow reveal">The Celebrations</p>
-        <h2 class="reveal reveal-delay-1" style="font-size:clamp(2.1rem,4.6vw,3rem); margin-top:14px;">Wedding Events</h2>
+        <p class="eyebrow reveal" id="events-eyebrow"></p>
+        <h2 class="reveal reveal-delay-1" id="events-title" style="font-size:clamp(2.1rem,4.6vw,3rem); margin-top:14px;"></h2>
+        <p class="events-intro reveal reveal-delay-2" id="events-intro"></p>
       </div>
 
       <div class="timeline" id="timeline">
         <div class="timeline-progress" id="timeline-progress"></div>
-        <!-- individual events are injected here by js/timeline.js -->
+        <!-- individual events are injected here dynamically by js/timeline.js -->
       </div>
     </div>
   </section>
@@ -124,54 +122,42 @@
         <path d="M32 28c-10 2-16 8-18 16 9 2 17-2 18-16z"/>
         <path d="M32 44c0 6-3 10-3 10h6s-3-4-3-10z"/>
       </svg>
-      <p class="eyebrow reveal">The Wedding Ceremony</p>
-      <div class="ceremony-date-big reveal reveal-delay-1" id="ceremony-date">25</div>
-      <div class="ceremony-month reveal reveal-delay-1">November 2026</div>
-      <p class="ceremony-the-wedding reveal reveal-delay-2">the wedding of</p>
-      <h2 class="ceremony-couple reveal reveal-delay-2">Shweta &amp; Vicky</h2>
-      <p class="ceremony-note reveal reveal-delay-3">Damoh, Madhya Pradesh &middot; time &amp; venue details to follow</p>
+      <p class="eyebrow reveal" id="ceremony-eyebrow"></p>
+      <div class="ceremony-date-big reveal reveal-delay-1" id="ceremony-date"></div>
+      <div class="ceremony-month reveal reveal-delay-1" id="ceremony-month"></div>
+      <p class="ceremony-the-wedding reveal reveal-delay-2" id="ceremony-tagline"></p>
+      <h2 class="ceremony-couple reveal reveal-delay-2" id="ceremony-couple"></h2>
+      <p class="ceremony-note reveal reveal-delay-3" id="ceremony-note"></p>
     </div>
   </section>
 
-  <!-- VENUE (populated by js/venue.js from js/config.js) -->
+  <!-- VENUE (populated dynamically by js/venue.js from js/config.js) -->
   <section id="venue">
     <div class="container">
-      <p class="eyebrow reveal">Join Us</p>
-      <h2 class="venue-place reveal reveal-delay-1">Damoh</h2>
-      <p class="venue-sub reveal reveal-delay-1">Madhya Pradesh, India</p>
+      <p class="eyebrow reveal" id="venue-eyebrow"></p>
+      <h2 class="venue-place reveal reveal-delay-1" id="venue-place"></h2>
+      <p class="venue-sub reveal reveal-delay-1" id="venue-sub"></p>
 
-      <!-- 📍 To change the venue name/address or activate the maps button,
-           edit the "venue" object in js/config.js — not this file. -->
-      <div class="venue-card reveal reveal-delay-2">
-        <p class="venue-name" id="venue-name">Wedding Venue</p>
-        <p class="venue-address" id="venue-address">Damoh, Madhya Pradesh, India</p>
-        <div class="venue-maps-btn">
-          <a href="#" id="venue-maps-link" class="btn" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
-        </div>
-        <p class="venue-hint" id="venue-hint">Full venue address to be shared closer to the date</p>
+      <div class="venue-cards-grid" id="venue-cards-container">
+        <!-- Injected dynamically by js/venue.js from weddingData.venues -->
       </div>
     </div>
   </section>
 
   <!-- GALLERY -->
-  <!-- 🖼️ To add real photos, drop image files into assets/images/gallery/
-       named photo-1.jpg through photo-6.jpg. Each tile below tries to load
-       its matching photo first and automatically falls back to the elegant
-       placeholder design if that file doesn't exist yet — add them one at
-       a time, whenever you have them, nothing else needs to change. -->
   <section id="gallery">
     <div class="container">
       <div class="gallery-head">
-        <p class="eyebrow reveal">Our Story</p>
-        <h2 class="reveal reveal-delay-1" style="font-size:clamp(2rem,4.4vw,2.8rem); margin-top:14px;">A Little Glimpse</h2>
+        <p class="eyebrow reveal" id="gallery-eyebrow">Moments</p>
+        <h2 class="reveal reveal-delay-1" id="gallery-title" style="font-size:clamp(2rem,4.4vw,2.8rem); margin-top:14px;">A Little Glimpse</h2>
       </div>
       <div class="gallery-single reveal">
         <div class="gallery-photo-wrap">
-          <img class="single-photo" src="assets/images/gallery/photo-1.jpg" alt="Shweta and Vicky" loading="lazy"
+          <img class="single-photo" src="assets/images/gallery/photo-1.jpg" alt="Wedding Couple" loading="lazy"
                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="gt-placeholder" style="display:none;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
-            <span>Add Photo</span>
+            <span>M &middot; A</span>
           </div>
         </div>
       </div>
@@ -181,17 +167,16 @@
   <!-- CLOSING -->
   <section id="closing">
     <div class="container">
-      <p class="closing-mono reveal">S &amp; V</p>
-      <p class="closing-text reveal reveal-delay-1">
-        We can't wait to celebrate this new beginning surrounded by the people we love most.
-        Thank you for being part of our story.
-      </p>
+      <p class="blessing-text reveal" id="closing-blessing"></p>
+      <p class="closing-mono reveal reveal-delay-1" id="closing-mono"></p>
+      <p class="closing-text reveal reveal-delay-1" id="closing-text"></p>
+      <p class="closing-text-hi reveal reveal-delay-1" id="closing-text-hi"></p>
       <div class="divider reveal reveal-delay-2">
         <span class="stroke"></span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 21s-7-4.5-9.5-9C.5 8 2 4 6 4c2.5 0 4.5 1.7 6 4 1.5-2.3 3.5-4 6-4 4 0 5.5 4 3.5 8-2.5 4.5-9.5 9-9.5 9z"/></svg>
         <span class="stroke"></span>
       </div>
-      <p class="closing-credit reveal reveal-delay-3">Shweta &amp; Vicky &middot; 25 November 2026 &middot; Damoh</p>
+      <p class="closing-credit reveal reveal-delay-3" id="closing-credit"></p>
     </div>
   </section>
 
@@ -206,8 +191,6 @@
 </nav>
 
 <!-- =============== MUSIC CONTROLLER =============== -->
-<!-- 🎵 To add music, place an mp3 at assets/music/wedding.mp3
-     (or edit the src below to match your filename). -->
 <button id="music-btn" aria-label="Play background music" aria-pressed="false">
   <svg viewBox="0 0 24 24" fill="none" id="music-icon-default"><path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.4"/></svg>
 </button>
@@ -216,9 +199,10 @@
 </audio>
 
 <!-- =============== SCRIPTS =============== -->
-<!-- Order matters: config first, then anything that reads weddingData,
-     then reveal.js last so it can see everything already on the page. -->
+<!-- Order matters: config first, then render engine to populate texts,
+     then timeline & venue generators, countdown, interactions, and reveal.js last. -->
 <script src="js/config.js"></script>
+<script src="js/render.js"></script>
 <script src="js/timeline.js"></script>
 <script src="js/venue.js"></script>
 <script src="js/countdown.js"></script>
